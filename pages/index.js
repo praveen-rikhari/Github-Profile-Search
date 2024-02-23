@@ -18,13 +18,13 @@ const Home = () => {
             <SearchForm onSubmit={handleSearch} />
             {userData && (
                 <div className="flex justify-center mt-4">
-                    <div className="bg-gray-100 rounded-md p-4 mt-4" style={{ maxWidth: '500px' }}>
-                        <h2 className="text-xl font-semibold">{userData.login}</h2>
-                        <img src={userData.avatar_url} alt={userData.login} className="w-20 h-20 mx-auto mt-4 rounded-full" />
-                        <p className="text-center mt-4">
-                            Followers: {userData.followers} | Following: {userData.following}
-                        </p>
-                        <p className="text-center mt-2">Public Repos: {userData.public_repos}</p>
+                    <div className="bg-white rounded-lg shadow-md p-6 max-w-md">
+                        <h2 className="text-xl font-semibold text-center mb-4">{userData.login}</h2>
+                        <img src={userData.avatar_url} alt={userData.login} className="w-20 h-20 mx-auto mb-4 rounded-full shadow-md" />
+                        <div className="text-center">
+                            <p className="text-gray-600">Followers: {userData.followers} | Following: {userData.following}</p>
+                            <p className="text-gray-600 mt-2">Public Repos: {userData.public_repos}</p>
+                        </div>
                     </div>
                 </div>
             )}
